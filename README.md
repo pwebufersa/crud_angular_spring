@@ -30,3 +30,4 @@ npm install -g @angular/cli
 
 ng new crud-angular
 
+ng add @angular/material
