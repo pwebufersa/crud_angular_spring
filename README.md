@@ -19,9 +19,17 @@ sudo apt-get -y update
 
 sudo apt install -y github-desktop
 
+sudo apt-get install -y gcc g++ make
+
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
-sudo apt-get install -y nodejs gcc g++ make
+sudo apt-get install nodejs
+
+sudo apt-get -y update
+
+sudo apt-get -y upgrade
+
+sudo apt-get -y autoremove
 
 curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
 
