@@ -1,0 +1,21 @@
+sudo apt-get install curl git build-essential libz-dev zlib1g-dev
+
+curl -s "https://get.sdkman.io" | bash
+
+source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+sdk install java 21.2.0.r11-grl
+
+sdk use java 21.2.0.r11-grl
+
+scd /home/ubuntu/
+wget https://dlcdn.apache.org/maven/maven-3/3.8.2/binaries/apache-maven-3.8.2-bin.tar.gz
+tar xzvf apache-maven-3.8.2-bin.tar.gz
+export PATH=$PATH:/home/xico/Downloads/apache-maven-3.8.2/bin
+mvn -v
+cd /home/kubuntu/.sdkman/candidates/java/current/bin/
+sudo ./gu install native-image
+cd /media/kubuntu/Windows/Linux/gs-rest-service/complete
+cp -r /media/kubuntu/Windows/Linux/.m2/ /home/kubuntu/
+export MAVEN_OPTS="-Xmx4G -Xms200m"
+nice mvn -Pnative -DskipTests package
